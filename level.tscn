@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://c27trc6nyqt7x"]
+
+[ext_resource type="PackedScene" uid="uid://b3ascd1ptw5ao" path="res://player.tscn" id="1_qctv7"]
+[ext_resource type="PackedScene" uid="uid://d4m1s1aiqvjy" path="res://block.tscn" id="1_rk8ku"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_r5wrx"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_61wgn"]
+sky_material = SubResource("ProceduralSkyMaterial_r5wrx")
+
+[sub_resource type="Environment" id="Environment_yajem"]
+background_mode = 2
+sky = SubResource("Sky_61wgn")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_bngpk"]
+size = Vector3(10, 0.5, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78vhf"]
+size = Vector3(10, 0.5, 10)
+
+[node name="Level" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_yajem")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85399, 8.49661)
+
+[node name="Floor" type="StaticBody3D" parent="."]
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_bngpk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_78vhf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.466157, 0.441605, 0.766604, -0.821689, -0.105055, 0.56017, 0.32791, -0.891038, 0.31389, 9.88254, 8.02649, 4.43455)
+
+[node name="Player" parent="." instance=ExtResource("1_qctv7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.91771, 3.09468)
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="Block1" parent="Blocks" instance=ExtResource("1_rk8ku")]
+transform = Transform3D(0.872543, -0.265665, -0.409989, 0.0751087, 0.902188, -0.424754, 0.48273, 0.339822, 0.807151, 0, 4, 0)
+
+[node name="Block2" parent="Blocks" instance=ExtResource("1_rk8ku")]
+transform = Transform3D(0.80912, -0.526715, 0.26057, 0, 0.443415, 0.896316, -0.587644, -0.725227, 0.358776, 0.468619, 5.4529, 0)
+
+[node name="Block3" parent="Blocks" instance=ExtResource("1_rk8ku")]
+transform = Transform3D(0.996917, 0.0784591, 0, -0.0525126, 0.667236, -0.742993, -0.0582946, 0.740703, 0.669299, -1.3905, 6.84418, 0)
