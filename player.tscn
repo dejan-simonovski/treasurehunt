@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3ascd1ptw5ao"]
+[gd_scene load_steps=5 format=3 uid="uid://b3ascd1ptw5ao"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_5eep0"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsxv0"]
+albedo_color = Color(0, 0.419608, 1, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_jkkwk"]
+material = SubResource("StandardMaterial3D_gsxv0")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_77i2o"]
 
@@ -14,3 +18,12 @@ mesh = SubResource("BoxMesh_jkkwk")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("BoxShape3D_77i2o")
+
+[node name="Camera_Controller" type="Node3D" parent="."]
+top_level = true
+
+[node name="Camera_Target" type="Node3D" parent="Camera_Controller"]
+transform = Transform3D(1, 0, 0, 0, 0.904909, 0.425606, 0, -0.425606, 0.904909, 0, 3.74573, 5.91499)
+
+[node name="Camera3D" type="Camera3D" parent="Camera_Controller/Camera_Target"]
+transform = Transform3D(1, 0, 0, 0, 0.997569, -0.0696868, 0, 0.0696868, 0.997569, 0, -0.471545, -3.49771)

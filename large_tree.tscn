@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://x5hsq0t5t4bq"]
+
+[ext_resource type="ArrayMesh" uid="uid://58c6k7wy7i0j" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/tree_large.obj" id="1_e0lvd"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7k5rl"]
+height = 3.1812
+radius = 0.238886
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_7k5rl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_e0lvd")
