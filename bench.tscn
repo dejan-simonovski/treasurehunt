@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb35chyul26p7"]
+
+[ext_resource type="ArrayMesh" uid="uid://c7gcglrlr63bu" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/bench.obj" id="1_cw2wb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_crtf5"]
+size = Vector3(1.95483, 1.05914, 1.16479)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q0bin"]
+size = Vector3(1.95947, 1.9093, 0.544769)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_cw2wb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0150146, 0.0295714, 0.0167236)
+shape = SubResource("BoxShape3D_crtf5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0119629, 0.454651, -0.395737)
+shape = SubResource("BoxShape3D_q0bin")

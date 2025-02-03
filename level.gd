@@ -20,6 +20,7 @@ func _process(delta) -> void:
 	$CanvasLayer/Panel/Minutes.text = "%02d:" % minutes
 	$CanvasLayer/Panel/Seconds.text = "%02d." % seconds
 	$CanvasLayer/Panel/Msec.text = "%03d" % msec
+	$CanvasLayer/Panel/Score.text = "Coins:  %s/7" % Global.coins
 	
 	if time <= 0:
 		get_tree().change_scene_to_file("res://lost_screen.tscn")
