@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2hkndijong3t"]
+
+[ext_resource type="ArrayMesh" uid="uid://bg8xvuce8q0yk" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/fountain.obj" id="1_q0x8u"]
+[ext_resource type="ArrayMesh" uid="uid://543f1oynfvqf" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/fountain_water.obj" id="2_u2hse"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_8i277"]
+height = 1.37426
+radius = 1.82435
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_inbm2"]
+height = 3.15086
+radius = 0.705024
+
+[node name="Fountain" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_q0x8u")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_u2hse")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_8i277")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_inbm2")

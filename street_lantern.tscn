@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c10xk543rbsac"]
+
+[ext_resource type="ArrayMesh" uid="uid://dqyauswd88fs0" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/street_lantern.obj" id="1_7djbb"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4nur5"]
+height = 6.71218
+radius = 0.195424
+
+[node name="StaticBody3D" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7djbb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_4nur5")

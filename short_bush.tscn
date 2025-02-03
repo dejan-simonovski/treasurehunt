@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://6u7xw5fhcadu"]
+
+[ext_resource type="ArrayMesh" uid="uid://cd0ka3v73n6pk" path="res://addons/tiny_treats_pretty_park_set/Assets/obj/bush_large.obj" id="1_nomqs"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1mlko"]
+radius = 0.795487
+
+[node name="ShortBush" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_nomqs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_1mlko")
