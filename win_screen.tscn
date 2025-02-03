@@ -10,7 +10,10 @@ offset_left = 15.0
 offset_top = 89.0
 offset_right = 1166.0
 offset_bottom = 528.0
-text = "You won!"
+text = "You won!
+
+
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true

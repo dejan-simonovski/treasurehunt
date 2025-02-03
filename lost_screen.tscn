@@ -8,19 +8,24 @@ script = ExtResource("1_hgbeq")
 [node name="Label" type="Label" parent="."]
 offset_left = -11.0
 offset_top = 100.0
-offset_right = 1141.0
+offset_right = 1139.0
 offset_bottom = 562.0
 text = "TIMER HAS RAN OUT.
 
-YOU LOST!"
+YOU LOST!
+
+
+"
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 524.0
-offset_top = 426.0
-offset_right = 612.0
-offset_bottom = 457.0
+offset_left = 517.0
+offset_top = 400.0
+offset_right = 605.0
+offset_bottom = 431.0
 text = "Play Again"
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
