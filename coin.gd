@@ -13,4 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
+	Global.coins += 1
+	if Global.coins >= Global.NUM_COINS_WIN:
+		get_tree().change_scene_to_file("res://win_screen.tscn")
 	queue_free()

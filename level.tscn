@@ -1,5 +1,6 @@
-[gd_scene load_steps=18 format=3 uid="uid://c27trc6nyqt7x"]
+[gd_scene load_steps=19 format=3 uid="uid://c27trc6nyqt7x"]
 
+[ext_resource type="Script" path="res://level.gd" id="1_kd0pj"]
 [ext_resource type="PackedScene" uid="uid://b3ascd1ptw5ao" path="res://player.tscn" id="1_qctv7"]
 [ext_resource type="PackedScene" uid="uid://c10xk543rbsac" path="res://street_lantern.tscn" id="4_rg0dv"]
 [ext_resource type="PackedScene" uid="uid://x5hsq0t5t4bq" path="res://large_tree.tscn" id="4_uou55"]
@@ -53,6 +54,7 @@ size = Vector3(60, 30, 60)
 [sub_resource type="BoxShape3D" id="BoxShape3D_764lj"]
 
 [node name="Level" type="Node3D"]
+script = ExtResource("1_kd0pj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_yajem")
@@ -73,33 +75,10 @@ transform = Transform3D(0.466157, 0.441605, 0.766605, -0.821689, -0.105055, 0.56
 [node name="Player" parent="." instance=ExtResource("1_qctv7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.69766, 0.284848, 6.75573)
 
-[node name="Coin" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0271025, 0.78948, -0.00307941)
-
-[node name="Coin1" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, 24.7811, 0, -15.9089)
-
-[node name="Coin2" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -6.39753, 0, 25.2749)
-
-[node name="Coin3" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, 28.5304, 0, 0)
-
-[node name="Coin4" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -5.70364, 0, -14.3314)
-
-[node name="Coin5" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -19.9642, 0, -5.11616)
-
-[node name="Coin7" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, 26.6725, 0, 19.3846)
-
-[node name="Coin6" parent="Coin" instance=ExtResource("5_cos7q")]
-transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -5.0368, 1.09326, 3.67626)
-
 [node name="GridMap" type="GridMap" parent="."]
 
 [node name="MapItems" type="Node3D" parent="."]
+metadata/_edit_group_ = true
 
 [node name="Trees" type="Node3D" parent="MapItems"]
 
@@ -129,6 +108,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.40067, 0, -1.8556)
 
 [node name="Tree9" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.7123, 0, -23.5411)
+
+[node name="Tree97" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7893, 0, -26.9739)
+
+[node name="Tree98" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.5265, 0, -18.0173)
+
+[node name="Tree99" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4759, 0, -10.5982)
 
 [node name="Tree10" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.8924, 0, -18.8117)
@@ -166,8 +154,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5573, 0, -14.0598)
 [node name="Tree91" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.8943, 0, -25.9221)
 
+[node name="Tree96" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.2238, 0, -20.3142)
+
 [node name="Tree92" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.7053, 0, -19.8546)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.2716, 0, -24.4255)
 
 [node name="Tree85" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.2574, 0, -14.0598)
@@ -180,6 +171,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5573, 0, -7.7954)
 
 [node name="Tree20" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.1117, 0, -10.7699)
+
+[node name="Tree95" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.8531, 0, -15.579)
 
 [node name="Tree21" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.32025, 0, -21.8839)
@@ -259,6 +253,9 @@ transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, 
 [node name="Tree41" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, 5.65896, 0, 13.0867)
 
+[node name="Tree100" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, 10.1843, 0, 26.115)
+
 [node name="Tree42" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, 3.43431, 0, 17.3124)
 
@@ -288,6 +285,12 @@ transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, 
 
 [node name="Tree51" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, -19.3435, 0, 9.12797)
+
+[node name="Tree93" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, -16.2355, 0, 25.2631)
+
+[node name="Tree94" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
+transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, -19.9714, 0, 19.5644)
 
 [node name="Tree52" parent="MapItems/Trees" instance=ExtResource("4_uou55")]
 transform = Transform3D(0.454162, 0, -0.890919, 0, 1, 0, 0.890919, 0, 0.454162, -18.7619, 0, 1.04622)
@@ -458,7 +461,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.420568, 0.237694, 1.84401)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.420568, 0.237694, 1.84401)
 
 [node name="TallBush2" parent="MapItems/Bushes/Tall" instance=ExtResource("6_etw86")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.420568, 0.237694, 1.84401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.35808, 0.237694, -4.89711)
 
 [node name="TallBush5" parent="MapItems/Bushes/Tall" instance=ExtResource("6_etw86")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95601, 0.237694, 11.093)
@@ -477,6 +480,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.1293, 0.237694, 13.8939)
 
 [node name="Fountain" parent="MapItems" instance=ExtResource("7_satwi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.09625, 0, 3.68091)
+
+[node name="Coins" type="Node3D" parent="MapItems"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0271025, 0.78948, -0.00307941)
+
+[node name="Coin1" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, 24.7811, 0, -15.9089)
+
+[node name="Coin2" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -6.39753, 0, 25.2749)
+
+[node name="Coin3" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, 18.9479, 0, 1.46822)
+
+[node name="Coin4" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -5.70364, 0, -14.3314)
+
+[node name="Coin5" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -19.9642, 0, -5.11616)
+
+[node name="Coin7" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, 26.6725, 0, 19.3846)
+
+[node name="Coin6" parent="MapItems/Coins" instance=ExtResource("5_cos7q")]
+transform = Transform3D(0.999997, 0.00201457, -0.00141916, -0.00201206, 0.999996, 0.00177626, 0.00142272, -0.00177341, 0.999997, -5.0368, 1.09326, 3.67626)
 
 [node name="FakeSkyPlayerLimit" type="StaticBody3D" parent="."]
 
@@ -507,3 +534,38 @@ process_mode = 4
 physics_interpolation_mode = 2
 transform = Transform3D(60, 0, 0, 0, 60, 0, 0, 0, 60, -60, 0, 0)
 shape = SubResource("BoxShape3D_764lj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+offset_left = 21.0
+offset_top = 15.0
+offset_right = 149.0
+offset_bottom = 47.0
+
+[node name="Minutes" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 5.0
+offset_right = 38.0
+offset_bottom = 28.0
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 28.0
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Msec" type="Label" parent="CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 5.0
+offset_right = 117.0
+offset_bottom = 28.0
+text = "00"
+horizontal_alignment = 2

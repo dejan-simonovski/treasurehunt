@@ -13,3 +13,27 @@ mesh = ExtResource("1_7djbb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CylinderShape3D_4nur5")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.177133, 3.38886, 0.391097)
+light_color = Color(1, 1, 0.333333, 1)
+light_energy = 2.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 2.0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.359535, 3.38886, -0.336782)
+light_color = Color(1, 1, 0.333333, 1)
+light_energy = 2.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 2.0
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.389511, 3.38886, -0.314394)
+light_color = Color(1, 1, 0.333333, 1)
+light_energy = 2.0
+shadow_enabled = true
+distance_fade_enabled = true
+omni_range = 2.0
